@@ -20,11 +20,7 @@ var state = {
   Cheese: true,
   Tomatoes: true,
   Onions: true,
-  Lettuce: true/*,
-  getValue()
-  {
-    consol.log(document.querySelector(".active").innerHTML);
-  }*/
+  Lettuce: true
 };
 
 // This function renders the entire screen everytime the state changes accordingly
@@ -41,7 +37,7 @@ function renderAll() {
 
 function renderPatty() {
   let patty = document.querySelector("#patty");
-  //you can also use getElementById
+  
   if (state.Patty) {
     patty.style.display = "inherit";
   } else {
@@ -52,7 +48,7 @@ function renderPatty() {
 function renderCheese() {
   //Trial 1 - Change the visibility of cheese based on state by manipulating the DOM
   let patty = document.querySelector("#cheese");
-  //you can also use getElementById
+  
   if (state.Cheese) {
     patty.style.display = "inherit";
   } else {
@@ -63,7 +59,7 @@ function renderCheese() {
 function renderTomatoes() {
   //Trial 1 - Change the visibility of Tomatoes based on state by manipulating the DOM
   let patty = document.querySelector("#tomato");
-  //you can also use getElementById
+
   if (state.Tomatoes) {
     patty.style.display = "inherit";
   } else {
@@ -74,7 +70,7 @@ function renderTomatoes() {
 function renderOnions() {
   //Trial 1 - Change the visibility of Onions based on state by manipulating the DOM
   let patty = document.querySelector("#onion");
-  //you can also use getElementById
+  
   if (state.Onions) {
     patty.style.display = "inherit";
   } else {
@@ -85,7 +81,7 @@ function renderOnions() {
 function renderLettuce() {
   //Trial 1 - Change the visibility of Lettuce based on state by manipulating the DOM
   let patty = document.querySelector("#lettuce");
-  //you can also use getElementById
+  
   if (state.Lettuce) {
     patty.style.display = "inherit";
   } else {
@@ -129,7 +125,7 @@ function renderButtons()
   let i=0;
   for(let key in state)
   {
-    //console.log(data[i]);
+    
     if(state[key]==false)
     {
       data[i].style.backgroundColor="#666";
@@ -139,7 +135,7 @@ function renderButtons()
     }
     i++;
   }
-  //console.log(data);
+
 }
 
 //Challenge 2 - Render only the items selected in the ingredients board based on the state
@@ -149,7 +145,7 @@ function renderIngredientsBoard()
   let i=0;
   for(let key in state)
   {
-    //console.log(data[i]);
+    
     if(state[key]==false)
     {
       data[i].innerHTML="";
@@ -171,7 +167,7 @@ function renderPrice()
   let sum1=20;
   for(let key in state)
   {
-    //console.log(data[i]);
+   
     if(state[key]==true)
     {
       sum1=sum1+ingredients[key];
